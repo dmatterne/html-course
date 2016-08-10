@@ -3,19 +3,34 @@
 
     </head>
     <body>
-        <form id="Contact">
+        <form id="Contact" encType="multipar/form-data"> <!--NOTE: This is added for file upload -->
+          <fieldset>
+          <legend>Contact Information</legend>
            <table>
-            <tr><td><label for="Voornaam">Voornaam :</label></td><td><input type="text" name="Voornaam" placeholder="Enter voornaam hier:" size="50" /></td></tr>
-            <tr><td><label for="Achternaam">Achternaam : </label></td><td><input type="text" name="Achternaam" placeholder="Enter achternaam hier:" size="50"/></td></tr>
-            <tr><td><label for="DOB">Geboortedatum: </label></td><td><input type="date" name="DOB" size="50"/></td></tr>
-            <tr><td><label for="EmailAddress">E-mail: </label></td><td><input type="email" name="EmailAddress" size="50"/></td></tr>
-            <tr><td><label for="Reason">Reden: </label></td><td><input type="checkbox" name="Reden" value="Test"/>Test </td><td><input type="checkbox" name="Reden" value="Test2"/>Test2 </td></tr>
-            <tr><td><label for="Gender">Gender: </label></td>
-                <td><input type="radio" name="Gender" value="Man" checked /> Man <input type="radio" name="Gender" value="Woman"  /> Vrouw <input type="radio" name="Gender" value="Other" /> Ander</td></tr>
-            <tr><td><label for="file">Attach File: </label></td><td><input type="file" name="file" /></td></tr>
-            <tr><td><label for="comment">Comment: </label></td><td><textarea name="comment" form="Contact">Enter text here...</textarea></td></tr>
+            <tr><td><label for="vnaam">Voornaam :</label></td><td><input type="text" id="vnaam" name="Voornaam" placeholder="Enter voornaam hier:" size="50" /></td></tr>
+            <tr><td><label for="anaam">Achternaam : </label></td><td><input type="text" id="anaam" name="Achternaam" placeholder="Enter achternaam hier:" size="50"/></td></tr>
+            <tr><td><label for="DOB">Geboortedatum: </label></td><td><input type="date" id="DOB" name="DateOB" size="50"/></td></tr>
+            <tr><td><label for="email">E-mail: </label></td><td><input type="email" id="email" name="EmailAddress" size="50"/></td></tr>
+            <tr><td><label for="reason">Reden: </label></td><td><input type="checkbox" id="reason" name="Reden" value="Test"/>Test </td><td><input type="checkbox" name="Reden" value="Test2"/>Test2 </td></tr>
+            <tr><td><label for="geslacht">Gender: </label></td>
+                <td><input type="radio" name="Gender" value="M" checked /> Man <input type="radio" id="geslacht" name="Gender" value="F"  /> Vrouw <input type="radio" name="Gender" value="O" /> Ander</td></tr>
+            <tr><td><label for="geslacht">Country: </label>
+                <td><select name=“Country”>
+                    <option value=“be”>Belgium</option> <option value=“nl”>Netherlands</option> <option value=“fr”>France</option>
+                </select></td></tr>
+            <tr><td><label for="bestand">Attach File: </label></td><td><input type="file" id="bestand" name="file" /></td></tr>
+            <tr><td><label for="comment">Comment: </label></td><td><textarea id="comment" name="comment" form="Contact">Enter text here...</textarea></td></tr>
             <tr><td><input type="submit" name="submit" value="Submit"><input type="reset" name="reset" value="Reset"></td></tr>
             </table>
+        </fieldset>
+
+<!-- NOTE: Hidden but usefull
+        <video width="1080" height="780" controls="controls" loop autoplay>
+            <source src="media/trailer_1080p.mov" type="video/quicktime" />
+        </video>
+-->
+
         </form>
     </body>
 </html>
+ d
