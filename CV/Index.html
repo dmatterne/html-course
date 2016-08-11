@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8" />
     <title>David Matterne's Personal Website</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
 <body>
     <header>
         <h1>David Matterne</h1>
-        <h2>Curriculum Vitae</h2> </header>
-    <nav>Home|CV</nav>
-    <section>
-        <header><h2> Opleiding </h2></header>
+        <h2>Curriculum Vitae</h2>
+     </header>
+    <div id="main">
+    <nav>
+        <ul>
+            <li><a href="Index.html" >Home</a></li>
+            <li><a href="CV.html" >Resume</a></li>
+            <li><a href="Form.html" >Contact</a></li>
+        </ul>
+    </nav>
+    <article>
+        <section>
+        <header><h3> Opleiding </h3></header>
         <details closed>
             <summary>May 2016 - November 2016: Ontwikkelaar Mobiele Apps aan VDAB / Cevora door RealDolmen</summary>
             <p>Vakken:</p>
@@ -41,8 +52,8 @@
             <summary>1999 - 2003: Economie-Wiskunde aan het Sint-Tarcisiusinstituut, Zoutleeuw.</summary>
         </details>
     </section>
-    <section>
-    <header><h2> Werk ervaring </h2> </header>
+        <section>
+    <header><h3> Werk ervaring </h3> </header>
     <details>
         <summary>04/2007- 02/2016 - Business Consultant in BAE Systems - Applied Intelligence te Heverlee, Leuven</summary>
         <p> Takenpakket: </p>
@@ -75,8 +86,9 @@ Databank : Aanmaken, wijzigen, raadplegen van complexe tabellen, views, function
 
 </details>
     </section>
-    <section>
-    <header> <h2>About</h2> </header>
+    </article>
+    <aside>
+    <header> <h3>About</h3> </header>
      <ul>
             <li>
                 <Address>Address: Dorpstraat 48 3350 Linter
@@ -87,8 +99,8 @@ Databank : Aanmaken, wijzigen, raadplegen van complexe tabellen, views, function
             <li>Linked in:</li>
             <li>Website: www.davidmatterne.be</li>
         </ul>
-    </section>
-    <section> </section>
+    </aside>
+    </div>
     <footer> &copy;2016 David Matterne Inc </footer>
 </body>
 
