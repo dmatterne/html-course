@@ -19,6 +19,8 @@ body {
 
 body > header {
     background-color: #046E97;
+/*    background-image: url(../Afbeeldingen/739844_4779295433180_1190722869_o.jpg);*/
+/*    background-size:auto;*/
 }
 
 body > header,
@@ -50,6 +52,7 @@ footer {
     background: #484853;
     flex: 3 1 60%;
     order: 2;
+
 }
 
 #main > nav {
@@ -65,8 +68,8 @@ footer {
 #main > aside {
     margin: 4px;
     padding: 5px;
-    /*        border: 1px solid #8888bb;*/
-    /*        border-radius: 7pt;*/
+/*    border: 1px solid #8888bb;*/
+/*    border-radius: 7pt;*/
     background: #2F3339;
     flex: 1 6 20%;
     order: 3;
@@ -105,27 +108,26 @@ h3 {
 
 h3 {
     color: #0993CE;
+
 }
 
-a:link {
-    color: white;
-    font-weight: normal;
-    font-style: normal;
-    text-decoration: none;
+#BAELogo {
+/*    padding: 1;*/
+    float: right;
+/*    border-style: solid;*/
+/*    border: 10px;*/
+/*    border-color: green;*/
+    box-shadow: 5px 5px 5px 1px black;
 }
 
-a:visited {
-    color: white;
+details > summary, section > p, h3 {
+    padding: 1rem;
 }
 
-a:hover {
-    color: #2F3339;
+article > section > p, details > p {
+    padding: 1rem;
+    text-align: justify;
 }
-
-a:active {
-    color: darkgreen;
-}
-
 
 /*
 #menuitem1 {
@@ -270,4 +272,28 @@ a:active {
 
 .main-navigation li.current a {
     border-right: 4px solid #4A90E2
+}
+
+
+a {
+    color: #E3E3E3;
+}
+
+a:link {
+    color: #E3E3E3;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #E3E3E3;
+}
+
+a:hover {
+    color: #2F3339;
+}
+
+a:active {
+    color: darkgreen;
 }
