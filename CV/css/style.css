@@ -1,117 +1,131 @@
-html, body, header {
+html,
+body,
+header {
     margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
 body {
-        font: 24px Helvetica;
-        background: #2F3339;
-        margin:0;
-        padding:0;
-        color:white;
-    }
-
-    body > header {
-        background-color:#046E97;
-    }
-
-    body > header, footer {
-        text-align: right;
-        display: block;
-/*        margin: 4px;*/
-/*        padding: 5px;*/
-        min-height: 100px;
-/*        border: 1px solid #eebb55;*/
-/*        border-radius: 7pt;*/
-
-    }
-
-    #main {
-        min-height: 800px;
-        margin: 0px;
-        padding: 0px;
-        display: flex;
-        flex-flow: row;
-    }
-
-    #main > article {
-        margin: 4px;
-        padding: 5px;
-/*        border: 1px solid #cccc33;*/
-/*        border-radius: 7pt;*/
-        background: #484853;
-        flex: 3 1 60%;
-        order: 2;
-    }
-
-    #main > nav {
-        margin: 4px;
-        padding: 5px;
-/*        border: 1px solid #8888bb;*/
-/*        border-radius: 7pt;*/
-        background: #2F3339;
-        flex: 1 6 20%;
-        order: 1;
-    }
-
-    #main > aside {
-        margin: 4px;
-        padding: 5px;
-/*        border: 1px solid #8888bb;*/
-/*        border-radius: 7pt;*/
-        background: #2F3339;
-        flex: 1 6 20%;
-        order: 3;
-    }
-
-
-
-    /* Too narrow to support three columns */
-    @media all and (max-width: 640px) {
-        #main, #page {
-            flex-direction: column;
-        }
-
-        #main > article, #main > nav, #main > aside {
-        /* Return them to document order */
-            order: 0;
-        }
-
-        #main > nav, #main > aside, header, footer {
-            min-height: 50px;
-            max-height: 50px;
-        }
-    }
-
-h1, h2, h3 {
+    font: 24px Helvetica;
+    background: #2F3339;
     margin: 0;
-    color:white;
+    padding: 0;
+    color: white;
+}
+
+body > header {
+    background-color: #046E97;
+}
+
+body > header,
+footer {
+    text-align: right;
+    display: block;
+    /*        margin: 4px;
+*/
+    /*        padding: 5px;*/
+    min-height: 100px;
+    /*        border: 1px solid #eebb55;*/
+    /*        border-radius: 7pt;*/
+}
+
+#main {
+    min-height: 800px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-flow: row;
+    font-size: 80%;
+}
+
+#main > article {
+    margin: 0px 4px 4px 4px;
+    padding: 5px;
+    border: 0.1rem solid #046E97;
+    /*        border-radius: 7pt;*/
+    background: #484853;
+    flex: 3 1 60%;
+    order: 2;
+}
+
+#main > nav {
+    margin: 4px;
+    padding: 5px;
+    /*        border: 1px solid #8888bb;*/
+    /*        border-radius: 7pt;*/
+    background: #2F3339;
+    flex: 1 6 20%;
+    order: 1;
+}
+
+#main > aside {
+    margin: 4px;
+    padding: 5px;
+    /*        border: 1px solid #8888bb;*/
+    /*        border-radius: 7pt;*/
+    background: #2F3339;
+    flex: 1 6 20%;
+    order: 3;
+}
+
+
+/* Too narrow to support three columns */
+
+@media all and (max-width: 640px) {
+    #main,
+    #page {
+        flex-direction: column;
+    }
+    #main > article,
+    #main > nav,
+    #main > aside {
+        /* Return them to document order */
+        order: 0;
+    }
+    #main > nav,
+    #main > aside,
+    header,
+    footer {
+        min-height: 50px;
+        max-height: 50px;
+    }
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    color: white;
+    padding: 1.5rem;
+}
+
+h3 {
+    color: #0993CE;
 }
 
 a:link {
-    color:white;
+    color: white;
     font-weight: normal;
-    font-style:normal;
+    font-style: normal;
     text-decoration: none;
-
 }
 
 a:visited {
-   color:white;
+    color: white;
 }
 
 a:hover {
-    color:#2F3339;
-
+    color: #2F3339;
 }
 
 a:active {
-    color:darkgreen;
+    color: darkgreen;
 }
+
 
 /*
 #menuitem1 {
@@ -157,3 +171,103 @@ a:active {
 
 }
 */
+
+.main-navigation__button {
+    display: block;
+    float: left;
+    width: 56px;
+    height: 44px;
+    position: relative;
+    padding: 12px 12px;
+    overflow: hidden;
+    border: 0;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    -webkit-filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.25))
+}
+
+@media only screen and (min-width: 26.66667rem) {
+    .main-navigation__button {
+        margin-right: 0.66667rem
+    }
+}
+
+@media only screen and (min-width: 42.66667rem) {
+    .main-navigation__button {
+        margin-right: 0;
+        width: 80px;
+        height: 64px;
+        padding: 1.22222rem 1.33333rem
+    }
+}
+
+.main-navigation__button span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #666;
+    margin-bottom: 4px;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.15s ease;
+    transition: all 0.15s ease
+}
+
+.main-navigation__button.active span:nth-child(1) {
+    -webkit-transform: translate3d(0, 8px, 0) rotate(45deg);
+    -moz-transform: translate3d(0, 8px, 0) rotate(45deg);
+    -ms-transform: translate3d(0, 8px, 0) rotate(45deg);
+    -o-transform: translate3d(0, 8px, 0) rotate(45deg);
+    transform: translate3d(0, 8px, 0) rotate(45deg)
+}
+
+.main-navigation__button.active span:nth-child(2) {
+    opacity: 0
+}
+
+.main-navigation__button.active span:nth-child(3) {
+    -webkit-transform: translate3d(0, -8px, 0) rotate(-45deg);
+    -moz-transform: translate3d(0, -8px, 0) rotate(-45deg);
+    -ms-transform: translate3d(0, -8px, 0) rotate(-45deg);
+    -o-transform: translate3d(0, -8px, 0) rotate(-45deg);
+    transform: translate3d(0, -8px, 0) rotate(-45deg)
+}
+
+.main-navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.main-navigation li {
+    border-top: 1px solid #f0f0f0
+}
+
+.main-navigation li:first-child {
+    border-top: none
+}
+
+.main-navigation a {
+    display: block;
+    color: inherit;
+    padding: 0.5rem 1.33333rem;
+    text-decoration: none;
+    font-weight: inherit
+}
+
+.main-navigation a:hover {
+    background: #f7f7f7
+}
+
+.main-navigation li.current a {
+    border-right: 4px solid #4A90E2
+}
