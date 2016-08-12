@@ -5,9 +5,10 @@
     <title>David Matterne's Personal Website</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <script src="" ></script>
+    <script src="js/myscript.js"></script>
 </head>
 
+<!--<body onload="showDate()">-->
 <body>
     <header>
         <h1 class="animated fadeInRight">David Matterne</h1>
@@ -22,7 +23,16 @@
             </ul>
         </nav>
         <article>
+            <h1> Javascript</h1>
 
+<!--            <input type="button" value="Kijk mij" onclick="showDate()" />-->
+            <script>
+                showDate();
+                var i = 5;
+                var j = 5 * i;
+                document.writeln("Het antwoord is " + j);
+            </script>
+            <p>einde van de pagina</p>
         </article>
     </div>
     <footer> &copy;2016 David Matterne Inc </footer>
