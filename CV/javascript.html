@@ -1,41 +1,96 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <title>David Matterne's Personal Website</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <script src="js/myscript.js"></script>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        .prime {
+            background: blue;
+        }
+
+    </style>
 </head>
 
 <!--<body onload="showDate()">-->
 <body>
-    <header>
-        <h1 class="animated fadeInRight">David Matterne</h1>
-        <h2 class="animated fadeInRight">Curriculum Vitae</h2>
-    </header>
-    <div id="main">
-        <nav role="navigation" id="main-navigation" class="main-navigation">
-            <ul role="menu">
-                <li role="menuitem" ><a href="Index.html">Home</a></li>
-                <li role="menuitem"><a href="Resume.html">Resume</a></li>
-                <li role="menuitem" class="current"><a href="Form.html">Contact</a></li>
-            </ul>
-        </nav>
-        <article>
-            <h1> Javascript</h1>
+<header>
+    <h1 class="animated fadeInRight">David Matterne</h1>
+    <h2 class="animated fadeInRight">Curriculum Vitae</h2>
+</header>
+<div id="main">
+    <nav role="navigation" id="main-navigation" class="main-navigation">
+        <ul role="menu">
+            <li role="menuitem"><a href="Index.html">Home</a></li>
+            <li role="menuitem"><a href="Resume.html">Resume</a></li>
+            <li role="menuitem" class="current"><a href="Form.html">Contact</a></li>
+        </ul>
+    </nav>
+    <article>
+        <h1> Javascript</h1>
 
-<!--            <input type="button" value="Kijk mij" onclick="showDate()" />-->
-            <script>
-                showDate();
-                var i = 5;
-                var j = 5 * i;
-                document.writeln("Het antwoord is " + j);
-            </script>
-            <p>einde van de pagina</p>
-        </article>
-    </div>
-    <footer> &copy;2016 David Matterne Inc </footer>
+        <!--            <input type="button" value="Kijk mij" onclick="showDate()" />-->
+        <!--<script>-->
+        <!--showDate();-->
+        <!--var i = 5;-->
+        <!--var j = 5 * i;-->
+        <!--document.writeln("Het antwoord is " + j);-->
+        <!--</script>-->
+
+        <script>
+
+            var prime = 1;
+            var i = 10;
+            var x = 1;
+            var z = x;
+
+            function isPrime(n) {
+                if (n === 1) {
+                    return false;
+                }
+
+                for (var w = 2; w < n; w++) {
+                    if (n % w === 0)
+                        return false;
+                }
+                return true;
+            }
+
+
+            document.writeln("<table>");
+            for (var j = 1; j <= i; j++) {
+                document.writeln("<tr>");
+                for (var k = 1; k <= i; k++) {
+
+
+                    if (isPrime(x) === false ) {
+                        document.writeln("<td>");
+                        document.writeln(x);
+                    } else {
+                        document.writeln('<td class="prime">');
+                        document.writeln(x + "= Prime");
+                    }
+
+                    x++;
+                    document.writeln("</td>");
+
+                }
+                document.writeln("</tr>");
+            }
+            document.writeln("</table>");
+        </script>
+        <p>einde van de pagina</p>
+    </article>
+</div>
+<footer> &copy;2016 David Matterne Inc</footer>
 </body>
 
 </html>
+
+

@@ -6,5 +6,6 @@
             document.writeln("Volgend jaar bent u " + (age + 1) + " jaar oud")
 
             console.log("Testing 1 2 3");
+            var a = String("test");
 
         }
