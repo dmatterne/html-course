@@ -3,133 +3,67 @@
 <head>
     <meta charset="UTF-8" />
     <title>David Matterne's Personal Website</title>
+
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//code.jquery.com">
+    <link href="//fonts.googleapis.com/css?family=Roboto:400,100,400italic,700italic,700" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/326d253d7b.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-social.css" />
+
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+
+
 </head>
 
 <body>
     <header>
-        <h1>David Matterne</h1>
-        <h2>Curriculum Vitae</h2>
+        <div id="leftHeader">
+            <h1 class="animated fadeInRight">David Matterne</h1>
+            <h2 class="animated fadeInRight">Curriculum Vitae</h2>
+        </div>
+        <div id="rightHeader">
+            <ul id="rightList">
+                <li>
+                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> &nbsp; Dorpstraat 48 3350 Linter
+                </li>
+                <li><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> &nbsp; December 17th 1985</li>
+                <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> &nbsp; david.matterne@gmail.com</li>
+                <li><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>&nbsp; (32) 495 844 372</li>
+                <li>
+                    <a href=""><i class="fa fa-linkedin-square" aria-hidden="true"></i> &nbsp; www.linkedin.com/in/david-matterne</a>
+                </li>
+                <li>
+                    <a href=""><span class="glyphicon glyphicon-link" aria-hidden ="true" ></span>&nbsp; www.davidmatterne.be</a>
+                </li>
+
+        </ul>
+        </div>
     </header>
     <div id="main">
         <nav role="navigation" id="main-navigation" class="main-navigation">
             <ul role="menu">
                 <li role="menuitem" class="current"><a href="Index.html">Home</a></li>
-                <li role="menuitem"><a href="CV.html">Resume</a></li>
+                <li role="menuitem"><a href="Resume.html">Resume</a></li>
                 <li role="menuitem"><a href="Form.html">Contact</a></li>
             </ul>
         </nav>
         <article>
-            <section>
-                <header>
-                    <h3> Opleiding </h3></header>
-                <details closed>
-                    <summary>May 2016 - November 2016: Ontwikkelaar Mobiele Apps aan VDAB / Cevora door RealDolmen</summary>
-                    <p>Vakken:</p>
-                    <ul>
-                        <li>Android, iOS and Java Programming</li>
-                        <li>Java Persistence API</li>
-                        <li>Unit Testing with Java</li>
-                        <li>GoF Design Patterns</li>
-                        <li>HTML5, CSS3, JavaScript and AngularJS</li>
-                        <li>Java Servlets and JSP Programming</li>
-                        <li>Spring 4.0</li>
-                        <li>SQL</li>
-                        <li>Maven and Git</li>
-                    </ul>
-                    <p>Projecten: </p>
-                    <ul>
-                        <li>Miniproject Mobile</li>
-                        <li>Miniproject Java</li>
-                    </ul>
-                </details>
-                <details>
-                    <summary>2003 - 2006:Professionele Bachelor in Toegepaste Informatica aan PXL Hasselt. Diploma behaald met onderscheiding.</summary>
-                    <p>Projecten:</p>
-                    <p>Het bouwen van een website met behulp van Java servlets/Java beans voor Kinepolis met behulp van Oracle. Hiervoor heb ik een attest behaald voor projectwerking waar ik op geslaagd ben met grote onderscheiding. Stage te Robert Bosh Tienen, updaten van Intranet met behulp van ASP en programmeren in VB.net. Vakken: Netwerken, Cobol, VB.NET, Java, Oracle, C++, Systeemanalyse, Procedureel Programmeren, Web Design, Microsoft Office, ..
-                    </p>
-                </details>
-                <p> 1999 - 2003: Economie-Wiskunde aan het Sint-Tarcisiusinstituut, Zoutleeuw.</p>
-            </section>
-            <section>
-                <header>
-                    <h3> Werk ervaring </h3> </header>
-                <details>
-                    <summary>
-                    <div id="BAELogo">
-                        <img src="Afbeeldingen/2002-t.gif" alt="Logo for BAE Systems"/>
-                    </div>
-                    04/2007- 02/2016 - Business Consultant in BAE Systems - Applied Intelligence te Heverlee, Leuven</summary>
-                    <p> Takenpakket: </p>
-                    <p>Instaan voor het houden van scoping sessies bij de klant, de vereisten van de klant analyseren, documenteren en vertalen in taken voor het projectteam met behulp van de nodige tools en de taken verdelen over het team. Het aanmaken van testcases op basis van het document en het implementeren en testen van de wijzigingen samen met het team. Na de installatie bij de klant sta ik ook in voor de klantenondersteuning zowel tijdens het testen bij de klant als nadien. Het ondersteunen en trainen van nieuwe teamleden, zowel ervaren leden als beginners door expert te zijn in de aangeboden software. Databank : Aanmaken, wijzigen, raadplegen van complexe tabellen, views, functions, procedures, indexes voor de projecten in zowel Oracle, Teradata en SQL Server Databanken. Oplossingen zoeken voor performantie problemen.</p>
-                    <p>
-                        <table>
-                            <tr>Projecten</tr>
-                            <tr>
-                                <td></td>
-                                <td>DnB Bank Noorwegen:</td>
-                                <td>Opeenvolgende projecten voor de volgende software oplossingen:
-                                    <ul>
-                                        <li>AML (Anti-Money Laundering)</li>
-                                        <li>WLM (Watchlist Management)</li>
-                                        <li>KYCC (Know Your Customer’s Customer)</li>
-                                        <li>FATCA (Foreign Account Tax Compliance Act) en database-migratie project, inclusief klant-specifieke wijzigingen voor hun rapporterende instelling Altinn.</li>
-                                    </ul>
-                                    Toegepaste technische vaardigheden :
-                                    <ul>
-                                        <li>SQL</li>
-                                        <li>Databanken</li>
-                                        <li>XML</li>
-                                        <li>HTML</li>
-                                        <li>CSS</li>
-                                        <li>SVN</li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Rabobank Nederland: </td>
-                                <td>Klant specifieke AML / WLM oplossing en een databasemigratie- project.</td>
-                                <tr>
-                                    <td></td>
-                                    <td>Rabobank International: </td>
-                                    <td>Standaard WLM oplossing met klantspecifieke wijzigingen.</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>BAE Systems - Madrid: </td>
-                                    <td>Teamleader, ondersteunen en trainen voor het implementeren van een nieuwe oplossing</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>BAE Systems - Parijs:</td>
-                                    <td>Het team in Parijs ter plaatse ondersteunen voor 3 maand in het migreren van verschillende database schema’s tot één schema met behulp van de software Talend.</td>
-                                </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>Andere:
-                                        <td>SNS Bank (AML / WLM), Swedbank (AML / WLM), Delta Lloyd (AML / WLM), Euroclear (WLM), UWV (Klantspecifiek project)</td>
-                                </tr>
-                        </table>
-
-                </details>
-            </section>
-        </article>
-        <aside>
             <header>
                 <h3>About</h3> </header>
-            <ul>
-                <li>
-                    <Address>Address: Dorpstraat 48 3350 Linter
-                </Address> </li>
-                <li>Date of Birth: December 17th 1985</li>
-                <li>Email: david.matterne@gmail.com</li>
-                <li>Phone number: (32) 495 844 372</li>
-                <li>Linked in:</li>
-                <li>Website: www.davidmatterne.be</li>
-            </ul>
-        </aside>
+
+        </article>
     </div>
     <footer> &copy;2016 David Matterne Inc </footer>
 </body>
