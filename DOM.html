@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+        <html>
+<head>
+    <style>
+        #container {
+            margin: 1rem;
+            padding: 1 rem;
+            background-color: red;
+             border: 1px dashed black;
+        }
+    </style>
+</head>
+<body>
+    <h1> DHTML </h1>
+
+    <h1>One</h1>
+    <h1>Two</h1>
+    <h1>Three</h1>
+    <input type = "button" value = "Click me" onclick="drawSelectBox()" />
+
+    <div id = "container" >
+         dsfsqdqdfs
+    </div>
+
+    <script>
+        function drawSelectBox() {
+            var x = document.getElementById("container");
+            x.style.backgroundColor = "hsl(180,50%,50%)";
+            var ha = document.getElementsByTagName("h1");
+
+            for (var i = 1; i < ha.length ; i++) {
+                ha[i].style.fontFamily = "sans-serif";
+                ha[i].innerHTML = "Test " + i;
+            }
+
+            var a = document.createElement("select");
+            var o1 = document.createElement("option");
+            o1.setAttribute("value","nl");
+            var nl = document.createTextNode("Nederlands");
+            o1.appendChild(nl);
+            var o2 = document.createElement("option");
+            o2.setAttribute("value","fr");
+            var fr = document.createTextNode("Francais");
+            o2.appendChild(fr);
+            var o3 = document.createElement("option");
+            o3.setAttribute("value","de");
+            var de = document.createTextNode("Deutsch");
+            o3.appendChild(de);
+            var o4 = document.createElement("option");
+            o4.setAttribute("value","en");
+            var en = document.createTextNode("English");
+            o4.appendChild(en);
+
+            a.appendChild(o1);
+            a.appendChild(o2);
+            a.appendChild(o3);
+            a.appendChild(o4);
+
+            //x.innerHTML = "";
+            x.appendChild(a);
+
+            x.style.transform = "rotate(45deg)"
+        }
+    </script>
+
+    <!--<select name="">-->
+        <!--<option label = "nl">Nederlands</option>-->
+    <!--</select>-->
+</body>
+</html>
