@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Objects Demo</title>
+
+</head>
+<body>
+<script>
+
+    function Person(name) {
+        this.name = name;
+
+        return {
+            getName: function() {
+                return name;
+            }
+        }
+    }
+    Person.prototype.hello = function () {
+        document.writeln("Hello");
+    };
+
+
+//    //New creates an empty object but takes the prototype of the specified object
+//    var tmp = {};
+//    tmp.__proto__ = Person.prototype;
+//    //Person.apply(q, [])
+//    //Object(): with 'this' being o
+//
+//
+//
+//    var r = Person.apply(tmp);
+//
+//    if (r === undefined) {
+//        q = tmp;
+//    } else {
+//        q = r;
+//    }
+//
+//    r.hello();
+
+    var q = new Person('Jimi');
+
+    q.hello();
+
+    function f() {
+        var abc = "Private Hello";
+        var temp = function g() {
+            document.writeln(abc);
+            return 1507
+        }
+
+        return temp;
+    }
+
+    var x = f();
+    x();
+
+    var p = {
+        age: "30"
+        , sex: "Male"
+        , firstName: "Jimi"
+        , lastName: "Hendrix"
+        , getFullName: function () {
+            return this.firstName + " " + this.lastName;
+        }
+
+        , setFullName: function (firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+    };
+
+
+    p.instrument = "Guitar";
+
+    //        document.writeln(p.firstName);
+    //        document.writeln(p.lastName);
+    document.writeln("<div>" + p.getFullName()) + "</div>";
+    document.writeln("<div>" + p.age) + "</div>";
+    document.writeln("<div>" + p.sex) + "</div>";
+
+    p.setFullName("David", "Matterne")
+
+    document.writeln("<div>" + p.getFullName()) + "</div>";
+    document.writeln("<div>" + p.age) + "</div>";
+    document.writeln("<div>" + p.sex) + "</div>";
+
+
+</script>
+</body>
+</html>

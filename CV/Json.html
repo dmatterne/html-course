@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <style>
+            td {
+
+                border: 0.2rem black;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <h1>
+            JSON
+        </h1>
+
+        //data for this field can be retrieved on https://www.flickr.com/services/api/explore/flickr.interestingness.getList
+        <textarea id="data"></textarea>
+
+        <input type="button" onclick="process()" value = "verwerk data" />
+
+        <script>
+
+            function process() {
+                var ta = document.getElementById("data");
+                var data = ta.value;
+
+                var o = JSON.parse(data)
+                console.log(o);
+
+                document.writeln("<table>");
+
+                for(var i = 0; i < o.photos.photo.length; i++) {
+                    var t = o.photos.photo[i].title
+                    document.writeln("<tr><td>" + t + "</td></tr>");
+
+                }
+
+                document.writeln("</table>");
+            }
+
+            var o = {
+                firstName: 'Jimi'
+                ,lastName: 'Hendrix'
+                ,songs: [
+                        'Hey Joe'
+                        ,'Purple Haze'
+                        ,'All Along the watchtower'
+                ]
+
+            }
+
+            o.songs
+        </script>
+    </body>
+</html>
