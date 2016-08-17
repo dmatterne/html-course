@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <style>
+        #circle {
+            width: 50px;
+            height: 50px;
+            -webkit-border-radius: 25px;
+            -moz-border-radius: 25px;
+            border-radius: 25px;
+            background-color: red;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1>
+    Events
+</h1>
+
+<input id = "myButton" type="button" value = "Click me " />
+
+
+<div id="circle"></div>
+
+<script>
+
+    document.getElementById("circle").addEventListener('click', function(c) {
+        c.target.style.background = "blue";
+        //document.getElementById("circle").style.background = "blue";
+    } );
+
+    var myButton = document.getElementById("myButton");
+    myButton.addEventListener('click', myHandler);
+
+    function myHandler(event) {
+        //var body = document.getElementsByTagName("body") [0]
+        var b = document.body;
+
+        var div = document.createElement("div");
+
+        div.innerHTML="HELLO";
+        b.appendChild(div);
+    }
+
+
+
+</script>
+
+
+</body>
+</html>

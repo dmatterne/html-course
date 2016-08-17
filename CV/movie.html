@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+
+
+</head>
+
+<input type="button" id="btn" value="Click me" onclick="init()"/>
+
+<script>
+
+    function loadJSON (callback) {
+        var xobj = new XMLHttpRequest();
+        xobj.addEventListener("readystatechange", function(e) {
+            if (xobj.readyState == 4 && xobj.status == "200") {
+                callback(xobj.responseText);
+                console.log(e);
+                console.log(xobj.responseText);
+            } else {
+                console.log('error');
+            }
+
+        });
+        xobj.open('GET', 'http://api.themoviedb.org/3/discover/movie?api_key=ca9a1beb4fdc39af636331186dd1cc55',true)
+        xobj.send(null)
+    }
+
+
+//    function loadJSON(callback) {
+//        var xobj = new XMLHttpRequest();
+//
+//
+//        xobj.overrideMimeType("application.json");
+//        xobj.open('GET','http://api.themoviedb.org/3/discover/movie?api_key=ca9a1beb4fdc39af636331186dd1cc55',true);
+//        xobj.onreadystatechange = function () {
+//            if (xobj.readyState == 4 && xobj.status == "200") {
+//                callback(xobj.responseText);
+//            }
+//        };
+//        xobj.send(null)
+//    }
+
+    function init() {
+        loadJSON(function(response) {
+
+            var x = JSON.parse(response);
+
+            var b = document.body;
+            var t = document.createElement("table");
+
+            t.setAttribute("id","movies");
+
+
+
+            for (var i= 0; i < x.results.length; i++) {
+                var r = document.createElement("tr");
+                addMovie(x.results[i].title, x.results[i].overview, r)
+                t.appendChild(r)
+            }
+
+            t.appendChild(r)
+            b.appendChild(t);
+
+        });
+    }
+
+    function addMovie(title, description, r) {
+
+
+
+        //var moviediv = document.createElement("div");
+
+        //moviediv.setAttribute("class", "movie");
+
+        var c1 = document.createElement("td");
+
+        c1.innerHTML = title;
+
+        var c2 = document.createElement("td");
+
+        c2.innerHTML = description;
+
+        //b.appendChild(moviediv);
+        r.appendChild(c1);
+        r.appendChild(c2);
+
+
+
+
+    }
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+       <html>
+<head>
+    <style>
+        #circle {
+            width: 2rem;
+            height: 2rem;
+            border: 0.1rem solid red;
+            background: yellow;
+            border-radius: 50%;
+            position: absolute;
+            top: 200px;
+            left: 300px;
+            box-sizing: border-box;
+        }
+
+        #box{
+            border: 0.1rem solid black;
+            width: 100%;
+            height: 30rem;
+
+        }
+    </style>
+</head>
+<body>
+
+
+<!--<svg width="320" height="240" >-->
+    <!--<circle cx="10" cy="10" r = "10" id="ball2" />-->
+<!--</svg>-->
+
+<div id="box">
+
+    <div id="circle"></div>
+
+</div>
+
+
+
+<script>
+
+    var div = document.getElementById("box");
+//    var div = document.body;
+
+
+    div.addEventListener("mousemove",
+    function handler(event) {
+
+
+
+
+        changeBallPosition({x: event.clientX, y : event.clientY})
+
+
+
+        console.log(x + y);
+    } );
+
+    function changeBallPosition (point) {
+
+        const DIAMETER = 50;
+
+        var circle = document.getElementById("circle");
+
+        circle.style.width = DIAMETER + "px";
+        circle.style.height = DIAMETER + "px";
+
+
+        circle.style.left = (point.x - div.offsetLeft - DIAMETER/ 2) + "px";
+        circle.style.top = (point.y - div.offsetTop - DIAMETER / 2) + "px ";
+
+//        document.getElementById("ball2").setAttribute("r", Math.sin(point.x / 1000) * 100);
+    }
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+</script>

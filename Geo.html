@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+        <html>
+<head>
+
+</head><body>
+
+<div id="result"></div>
+<script>
+    var geo = navigator.geolocation;
+
+    var options = {
+        enableHighAccuracy: true
+    };
+
+    geo.watchPosition(success,error,options);
+
+    function success(position) {
+        console.log("success");
+        var lo = position.coords.longitude;
+        var la = position.coords.latitude;
+
+        console.log(lo + " " + la) ;
+    }
+
+    function error(positionError) {
+        console.log("error");
+    }
+
+    localStorage.setItem("lastname", "Smith");
+    // Retrieve
+    document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+
+    localStorage.removeItem("name");
+
+</script>
+</body>
+</html>
